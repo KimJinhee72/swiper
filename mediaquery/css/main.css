@@ -1,0 +1,86 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul ,li {
+    list-style: none;
+}
+html{
+    font-size: 15px;
+}
+h1{
+    text-align: center;
+    margin: 100px 0;
+    font-size: 2rem;
+}
+/* 폰트를 넓이 vw반응형으로  */
+h2{
+    text-align: center;
+    font-size: 2vw;
+}
+.container{
+    position: relative;
+    width: 50%;
+    max-width: 650px;
+    min-width: 270px;
+    margin: auto;
+    margin-top: 100px;
+    /* background-color: bisque; */
+}
+.card li{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    /* background-color: aquamarine; */
+}
+.card li img{
+    width: 60%;
+}
+.card-txt{
+    width: 40%;
+
+}
+.s-img{
+    display: none;
+}
+
+/* 반응형 한곳에 모으기 */
+@media all and ( max-width:768px) {
+    .card li{
+    flex-direction: column;
+    }
+    .card li img{
+        width: 100%;
+    }
+    .card-txt{
+        width: 100%;
+    }
+    h2{ font-size: 16px;}
+}
+@media all and ( max-width:390px){
+    .card-txt h3{
+        font-size: 15px;        
+    }
+    .card-txt {
+        
+        background-color: rgba(0 , 0 ,0 , .3);
+        color: #fff;
+    }
+    
+
+    html{
+        font-size: 8px;
+    }
+    .b-img{
+        display: none;
+    }
+    .s-img{
+        display: block;
+    }
+    
+}
+
+/* 내가 해봄 */

@@ -1,21 +1,75 @@
 @charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a{
-    cursor: pointer;
-    text-decoration: none;
+.itemSwiper {
+  width: 70%;
 }
-.itemSwiper{
-    /* 반응을 위해서 %가 좋음 */
-    width: 70% ;    
+.itemSwiper .swiper-slide {
+  width: 100%;
 }
-.itemSwiper .swiper-slide{
-    width: 100%;    
+.itemSwiper .swiper-slide img {
+  display: block;
+  width: 100%;
 }
-.itemSwiper .swiper-slide img{
-    /* 처음 70%에서 4개 js슬라이드로 되니 높이 값 없어도 잡힘*/
-    width: 100%;
+.itemSwiper-txt {
+  padding: 10px;
+  background-color: aqua;
+}
+/* visualSwiper */
+.visualSwiper {
+  margin: 100px 0;
+  position: relative;
+  width: 100%;
+  height: 31.25vw;
+  /* height: 600px; */
+  background-color: aqua;
+}
+.visualSwiper img {
+  width: 100%;
+}
+.visualSwiper .itemSwiper-txt {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mb_img {
+  display: none;
+}
+/* 반응형 */
+@media all and (max-width: 980px) {
+  .visualSwiper .itemSwiper-txt {
+    width: 180px;
+    font-size: 15px;
+    background-color: chartreuse;
+  }
+}
+@media all and (max-width: 590px) {
+  .itemSwiper-txt {
+    padding: 20px;
+    background-color: rgb(249, 207, 165);
+  }
+  .itemSwiper-txt p:first-child {
+    font-size: 13px;
+    color: #9a9a9a;
+  }
+}
+@media all and (max-width: 390px) {
+  .itemSwiper-txt {
+    padding: 10px;
+  }
+  .img {
+    display: none;
+  }
+  .mb_img {
+    display: block;
+   
+  }
+  .visualSwiper{
+    height: 94.35vw;
+  }
 }

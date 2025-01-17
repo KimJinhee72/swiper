@@ -1,0 +1,68 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.itemSwiper{
+    /* 반응을 위해서 %가 좋음 */
+    width: 70% ;    
+}
+.itemSwiper .swiper-slide{
+    width: 100%;    
+}
+.itemSwiper .swiper-slide img{
+    /* 처음 70%에서 4개 js슬라이드로 되니 높이 값 없어도 잡힘*/
+    width: 100%;
+    display: block;/*기본 떨어져서 이미지가 글과 바로 연결됨*/
+}
+.itemSwiper-txt{
+    padding: 10px ;
+    background-color: antiquewhite;
+}
+.visualSwiper{
+    position: relative;
+    width: 100%;
+    height: 31.25vw;
+    /* height: 700px; */
+    margin: 100px 10px;
+}
+.visualSwiper img{
+    width: 100%;
+}
+.visualSwiper .itemSwiper-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+/* 반응형 구간마다 screnn 쭉은 all 590px이하는 반응을 달리 설정함*/
+@media all and ( max-width : 890px ){
+    .visualSwiper .itemSwiper-txt{
+        width: 180px;
+        font-size: 15px;
+        
+}
+}
+@media all and ( max-width : 590px ) {
+    .itemSwiper-txt{
+        padding: 5px;
+        background-color: aqua;
+    }
+    .itemSwiper-txt:first-child{
+        font-size: 13px;
+        color: #9a9a9a;
+    }
+}
+@media all and ( max-width : 390px ) {
+    .itemSwiper-txt{
+        padding: 10px;
+    }
+    .visualSwiper{        
+        height: 94.35vw;
+    }
+}
